@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movie Ticket Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Movie Ticket Booking</h1>
+
+  <div class="container">
+
+    <div class="box">
+      <h2>Book a ticket</h2>
+
+      <label>Movie</label>
+      <select id="movie">
+      </select>
+
+      <label>Showtime</label>
+      <select id="time">
+        <option value="10:00 AM">10:00 AM</option>
+        <option value="02:00 PM">02:00 PM</option>
+        <option value="07:00 PM">07:00 PM</option>
+      </select>
+
+      <label>Number of tickets</label>
+      <input type="text" id="qty" placeholder="Example: 2">
+
+      <label>Your email</label>
+      <input type="text" id="email" placeholder="you@example.com">
+
+      <p class="total">Total price: <span id="total">₹0</span></p>
+
+      <button id="bookBtn">Book Ticket</button>
+      <button id="resetBtn" class="grey">Reset</button>
+
+      <p id="message"></p>
+    </div>
+    <div class="box">
+      <h2>My bookings (<span id="count">0</span>)</h2>
+      <input type="text" id="search" placeholder="Search bookings...">
+      <div id="list"></div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
